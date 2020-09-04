@@ -5,6 +5,8 @@ Enables connectivity within a single network (home, small office )
 1. Connectes between two different network 
 2. It has two unique ids in 2 different networks 
 
+# Gateway 
+
 
 # Networking related Commands
 ### Check the ip adress 
