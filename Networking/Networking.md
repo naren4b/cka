@@ -5,7 +5,9 @@
 
 # Router 
 1. Connectes between two different network 
-2. It has two uniique ids in 2 different networks 
+2. It has two unique ids in 2 different networks 
+
+# Gateway 
 
 ![Router](img/route.png)
 
