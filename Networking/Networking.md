@@ -1,5 +1,5 @@
 # Switch 
-1. Enables connectivity within a single network (home, small office )
+1. Enables connectivity within a single network (home, small office ) for the connected device(s)
 
 ![Switch](img/switch.png)
 
