@@ -18,3 +18,19 @@ spec:
 
 # How make the k8s to pull the latest image (```imagePullPolicy```  should set to ```always```)
 ```kubectl scale --replicas=0 deploy/my-app && kubectl scale --replicas=1 deploy/my-app```
+
+# run a busy-box container 
+```
+kubectl run busybox --image=busybox --command sleep 1000 --dry-run=client -o yaml > busy.yaml
+```
+
+# cluster ip range 
+Set at kube-api service configuration 
+
+# how to check iptable rules 
+iptables -L -t net | grep <service-name> 
+
+# iptable entry
+
+cat /var/log/kube-proxy.log
+
