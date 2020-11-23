@@ -34,3 +34,45 @@ iptables -L -t net | grep <service-name>
 
 cat /var/log/kube-proxy.log
 
+# Move all the workload from a node and make the node unschedulable in the active cluster
+```
+kubectl drain node-01 
+kubectl drain node-01 --ignore-daemonsets
+```
+# Make the node unscheduleable 
+```
+kubectl cordon node-01
+```
+# When it will be brough back
+```
+kubectl uncordon node-01
+```
+
+# Debuging  cluster issues
+1. if the component runs as system service
+```
+journalctl -u <componentname> -l ```
+2. if the component runs as a static pod 
+```
+ kubectl logs -n kube-system <component-name> -f 
+```
+3. If the kube-api is down 
+```
+containerid=docker ps -a | grep <component-name> | awk '{print $1}'
+docker logs $containerid
+
+```
+
+# refering documentation
+Kubectl explain <resource-name> --resursive | less
+
+/<search-text>
+i.e :
+kubectl explain pods
+kubectl explain pods.spec 
+
+
+
+
+
+
